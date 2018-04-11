@@ -1,5 +1,5 @@
 # GrooveMet
-Metronome for android devices to visualize any rhythmic ideas. Already published - [GrooveMet on Google Play](https://play.google.com/store/apps/details?id=com.bzrt.groovemet&hl=en)   
+Metronome for android devices to visualize any rhythmic ideas. Published - [GrooveMet on Google Play](https://play.google.com/store/apps/details?id=com.bzrt.groovemet&hl=en)   
 ![b](https://lh3.googleusercontent.com/bywa4sghZmpjx-GwM5cZi77rpOSqkNHKO1-G2P8OV_LNmPJKSK9qEiCjMi2QFvWihdjZ=w1440-h620-rw)
 ![a](https://lh3.googleusercontent.com/v_PDHhTvwelLqMw42281SWa3ClXmTMEynqhX5GbzdV8MTxDdhBER4KSNVWgr51AEWmg=w1440-h620-rw)  
 
@@ -7,7 +7,7 @@ Here I described how I implemented 1) Bezier curve and 2) fast flame effect.
 
 1) Bezier curve  
 Include Matrix.java and reference below codes.  
-- For the mathematic of matrix, most of code was cited from [this link](http://introcs.cs.princeton.edu/java/95linear/Matrix.java.html) and I added some customization.  
+- For the mathematic of matrix in Matrix.java, most of code was cited from [this link](http://introcs.cs.princeton.edu/java/95linear/Matrix.java.html) and I added some customization.  
 
 ```java
 // we do not modify mArrPoint, but just generate mBezierArray from mArrPoint as raw data
