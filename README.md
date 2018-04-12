@@ -1,5 +1,6 @@
 # GrooveMet
-Metronome for android devices to visualize any rhythmic ideas. Published - [GrooveMet on Google Play](https://play.google.com/store/apps/details?id=com.bzrt.groovemet&hl=en)   
+Metronome for Android devices to visualize any rhythmic ideas.  
+[GrooveMet on Google Play](https://play.google.com/store/apps/details?id=com.bzrt.groovemet&hl=en)   
 ![b](https://lh3.googleusercontent.com/bywa4sghZmpjx-GwM5cZi77rpOSqkNHKO1-G2P8OV_LNmPJKSK9qEiCjMi2QFvWihdjZ=w1440-h620-rw)
 ![a](https://lh3.googleusercontent.com/v_PDHhTvwelLqMw42281SWa3ClXmTMEynqhX5GbzdV8MTxDdhBER4KSNVWgr51AEWmg=w1440-h620-rw)  
 
@@ -97,13 +98,9 @@ private int BuildSmoothBezierArray() {
                                 3 * (.3333 * (float) control[i - 1].y + .6667 * (float) control[i].y) +
                                 (float) cpArray[i].y) * (t - (i - 1)))));
 
-//                            // too close points will be deleted.
-//                            if ( Math.abs(cpAmpleBzArray[iCount - 1].x - x2) <= 2 && Math.abs(cpAmpleBzArray[iCount - 1].y - y2) <= 2 ) continue;
-//                            else {
                 cpAmpleBzArray[iCount].x = x2;
                 cpAmpleBzArray[iCount].y = y2;
                 iCount++;
-//                            }
             }
         }
     }
@@ -124,7 +121,7 @@ private int BuildSmoothBezierArray() {
 The principle of this effect was described in longbow games (http://www.longbowgames.com/particlefire/) long ago, which seemingly disappeared.  
 In the nature, when dense substance exists on a spot, the substance spreads out and attenuates as time goes. We mimic that. 
 At a point on screen, the RGB value attenuates as time goes and the decreased amount of RGB will be added to adjacent points. From the simple math, beautiful burn effect takes place on your Android phone. However, this consumes huge CPU and the screen lagging accumulated more and more on Android devices.  
-The reason of the CPU consumption would be due to the RGB array calculation by java codes. So, a bitmap which caches screen image just ago was prepared in the memory and I called that a stamp. The stamp will be applied several times on current screen after adding more alpha value. RGB calculation will be done by the hardware more quickly than java codes.    
+The reason of the CPU consumption would be that the RGB array calculation is slow in java codes. So, a bitmap which caches screen image just ago was prepared in the memory and I called that a stamp. The stamp will be applied several times on current screen after adding more alpha value. RGB calculation will be done by the hardware more quickly than java codes.    
 
 ```java
 // the stamp
